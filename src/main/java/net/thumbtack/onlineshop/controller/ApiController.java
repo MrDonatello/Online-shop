@@ -63,7 +63,7 @@ public class ApiController {
         return userDtoResponse;
     }
 
-    @DeleteMapping("/api/sessions")
+    @DeleteMapping("/api/sessions" )
     public SessionDtoResponse logout(@CookieValue("JAVASESSIONID") String sessionId) throws ServiceException {
         return sessionService.deleteSession(sessionId);
     }
